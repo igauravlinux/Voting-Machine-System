@@ -190,7 +190,7 @@ class Main{
                     break;
 
                 case 4:
-                    System.out.println("result portal....");
+                    m.resultPortal();
                     break;
 
                 case 5:
