@@ -17,7 +17,7 @@ class User{
         this.aadharNum = aadharNum;
     }
 
-} // user class block
+}
 
 class Main{
     Scanner sc = new Scanner(System.in);
@@ -32,6 +32,16 @@ class Main{
 
         System.out.print("Enter Aadhar Number: ");
         String aadharNum = sc.nextLine();
+
+
+        if(newEmail.isEmpty() || newPass.isEmpty() || aadharNum.isEmpty()){
+            System.out.println("Feilds cannot be empty");
+            return;
+        }
+        if(aadharNum.length() != 12){
+            System.out.println("Invalid Aadhar Number");
+            return;
+        }
 
         User user = new User(newEmail,newPass,aadharNum);
         list.add(user);
@@ -94,8 +104,13 @@ class Main{
             System.out.println("3. JDU");
             System.out.println("4. BJP");
             System.out.print("Press a number to vote: ");
-            vote = sc.nextInt();
-
+            try {
+                vote = sc.nextInt();
+            }catch(Exception e){
+                System.out.println("Invalid input , Please enter a valid number.");
+                sc.nextLine();
+                continue;
+            }
             switch (vote){
                 case 1:
                     System.out.println("Voting Successful");
@@ -174,8 +189,13 @@ class Main{
 
             System.out.println("---------------------------------------------");
             System.out.print("Enter your choice ");
-            choice = sc.nextInt();
-
+            try {
+                choice = sc.nextInt();
+            }catch(Exception e){
+                System.out.println("Invalid input, Please enter a number.");
+                sc.nextLine();
+                continue;
+            }
             switch (choice){
                 case 1:
                     m.register();
