@@ -21,7 +21,7 @@ It allows users to cast their vote securely while ensuring that each user can vo
 * Java
 * Conditional Statements
 * Basic Data Structures
-* OOPs
+* Object-Oriented Programming (OOP)
 * Arraylist
 * String
 * Exception Handling
