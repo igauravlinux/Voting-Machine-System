@@ -16,6 +16,23 @@ It allows users to cast their vote securely while ensuring that each user can vo
 
 ---
 
+Main
+│
+├── User
+├── Authentication
+├── VotingSystem
+├── Candidate
+└── Result
+
+📌 Short Explanation:
+User → user details
+Authentication → login + validation
+VotingSystem → main logic control
+Candidate → candidate info + votes
+Result → counting + output
+
+---
+
 ## 🛠️ Technologies Used
 
 * Java
